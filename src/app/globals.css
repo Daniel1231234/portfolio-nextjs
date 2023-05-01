@@ -1,27 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  @apply bg-body m-0 text-gray-50
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+section {
+  min-height: 100vh;
+  margin-top: 200px;
+}
+
+.reveal {
+  @apply relative translate-y-36 opacity-0 transition-all duration-1000 ease-in-out active:translate-y-0 active:opacity-100;
+}
+
+.contact__container {
+  @apply grid md:grid-cols-[30%_58%] gap-[12%] sm:grid-cols-1;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1500px;
+
+  @media (min-width: 640px) {
+    /* sm */
+    padding: 0 24px;
+  }
+
+  @media (min-width: 768px) {
+    /* md */
+    padding: 0 24px;
+  }
+
+  @media (min-width: 1024px) {
+    /* lg */
+    padding: 0 40px;
+  }
+
+  @media (min-width: 1280px) {
+    /* xl */
+    padding: 0 80px;
+  }
+
+  @media (min-width: 1536px) {
+    /* 2xl */
+    max-width: 1760px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.section-title {
+  @apply text-center text-[2rem] transition-transform duration-[2s] mb-12 hover:rotate-[360deg];
+  font-family: "Edu TAS Beginner", cursive;
 }
+.proj-title {
+  @apply text-center text-2xl text-[#4db5ff] mx-auto my-4;
+  font-family: system-ui;
+}
+
+.proj-title:last-child {
+  margin-top: -1rem;
+}
+
+.reveal {
+  @apply relative translate-y-[150px] opacity-0 transition-[1s] duration-1000 ease-[ease];
+}
+.reveal.active {
+  @apply translate-y-0 opacity-100;
+}
+
