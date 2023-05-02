@@ -1,14 +1,11 @@
 "use client";
 
-import { FC} from "react";
 import Button from "./UI/Button";
 import { AnimatedText } from "./TypingAnimation";
 import Image from "next/image";
 
-interface HeaderProps {}
 
-const Home: FC<HeaderProps> = () => {
-
+const Home = () => {
   return (
     <div
       id="home"
@@ -16,8 +13,9 @@ const Home: FC<HeaderProps> = () => {
     >
       <div className="flex m-auto flex-col-reverse md:flex-row items-center justify-evenly w-full ">
 
-      <div className="relative h-[450px] md:w-1/2 md:mx-auto my-auto w-11/12 ">
-        <Image className="max-w-[500px] m-auto"
+      <div className="relative h-[400px] md:w-1/2 md:mx-auto my-auto w-11/12 ">
+        <Image 
+          className="max-w-[500px] m-auto"
           src="/profile.png"
           alt="profile"
           fill

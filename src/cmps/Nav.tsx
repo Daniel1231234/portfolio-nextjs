@@ -3,11 +3,9 @@
 import { Code2Icon, HomeIcon, InfoIcon, Laptop2, MailIcon } from "lucide-react";
 import { FC, useState } from "react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
-interface NavProps {}
 
-const Nav: FC<NavProps> = () => {
+const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
 
   return (

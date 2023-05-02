@@ -1,6 +1,7 @@
 'use client'
 
 import { FC, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 interface ProvidersProps {
   children: React.ReactNode;
@@ -26,9 +27,14 @@ const Providers: FC<ProvidersProps> = ({ children }) => {
   useEffect(() => {
     if (!window) return
     window.addEventListener("scroll", reveal)
-  })
+  },[])
 
-  return <>{children}</>;
+  return (
+  <>
+  <Toaster position="top-center" reverseOrder={false} />
+  {children}
+  </>
+  )
 };
 
 export default Providers;

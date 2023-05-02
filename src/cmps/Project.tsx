@@ -19,7 +19,7 @@ const ProjectItem = ({
   className?: string;
 }) => {
   return (
-    <Card className={`w-full min-h-fit ${className}`}>
+    <Card className={` ${className}`}>
       <CardHeader color="blue" className="relative">
         <Image
           src={proj.image}
@@ -34,10 +34,10 @@ const ProjectItem = ({
         />
       </CardHeader>
       <CardBody className="text-center">
-        <Typography variant="h5" className="mb-2">
+        <Typography variant="h5" className="text-center text-2xl text-[#4db5ff] mx-auto my-4 font-[system-ui]">
           {proj.title}
         </Typography>
-        <Typography className="text-justify">{proj.desc}</Typography>
+        <Typography className="text-justify p-0">{proj.desc}</Typography>
       </CardBody>
       <CardFooter divider className="flex items-center justify-between py-3">
         <Button size="sm">

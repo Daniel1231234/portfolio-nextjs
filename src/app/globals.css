@@ -6,73 +6,42 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth
+}
+
 body {
-  @apply bg-body m-0 text-gray-50
+  @apply bg-body m-0 text-gray-50 leading-6
+}
+
+* {
+  @apply box-border
 }
 
 section {
-  min-height: 100vh;
-  margin-top: 200px;
+  @apply min-h-[100vh] mt-52
 }
 
 .reveal {
   @apply relative translate-y-36 opacity-0 transition-all duration-1000 ease-in-out active:translate-y-0 active:opacity-100;
 }
 
-.contact__container {
-  @apply grid md:grid-cols-[30%_58%] gap-[12%] sm:grid-cols-1;
-}
-
-
 .container {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1500px;
-
-  @media (min-width: 640px) {
-    /* sm */
-    padding: 0 24px;
-  }
-
-  @media (min-width: 768px) {
-    /* md */
-    padding: 0 24px;
-  }
-
-  @media (min-width: 1024px) {
-    /* lg */
-    padding: 0 40px;
-  }
-
-  @media (min-width: 1280px) {
-    /* xl */
-    padding: 0 80px;
-  }
-
-  @media (min-width: 1536px) {
-    /* 2xl */
-    max-width: 1760px;
-  }
+  @apply max-w-[1500px] mx-auto my-0 px-5 py-0 sm:px-6 sm:py-0 md:px-6 md:py-0 lg:px-10 lg:py-0 xl:px-20 xl:py-0 2xl:max-w-[1760px];
 }
-
 
 .section-title {
   @apply text-center text-[2rem] transition-transform duration-[2s] mb-12 hover:rotate-[360deg];
   font-family: "Edu TAS Beginner", cursive;
 }
-.proj-title {
-  @apply text-center text-2xl text-[#4db5ff] mx-auto my-4;
-  font-family: system-ui;
-}
-
-.proj-title:last-child {
-  margin-top: -1rem;
-}
 
 .reveal {
   @apply relative translate-y-[150px] opacity-0 transition-[1s] duration-1000 ease-[ease];
 }
+
 .reveal.active {
   @apply translate-y-0 opacity-100;
 }
+
+
 

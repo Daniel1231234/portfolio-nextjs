@@ -10,7 +10,7 @@ import Skills from "@/cmps/Skills";
 export default function HomePage() {
   return (
     <>
-    <AppHeader />
+      <AppHeader />
       <Home />
       <Nav />
       <About />
@@ -19,5 +19,5 @@ export default function HomePage() {
       <Contact />
       <Footer />
     </>
-  )
+  );
 }
