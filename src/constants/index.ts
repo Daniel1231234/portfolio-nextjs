@@ -1,7 +1,4 @@
-import { NavLink, Permalinks, Services, Skill, SocialsData } from "./constants";
-
-
-
+import { NavLink, Permalinks, Skill, SocialsData } from "./constants";
 
 export const navLinks: NavLink[] = [
     {
@@ -22,17 +19,7 @@ export const navLinks: NavLink[] = [
     },
 ];
 
-export const services: Services[] = [
-    {
-        title: "Web Developer",
-        icon: "/web.png",
-    },
-    {
-        title: "Backend Developer",
-        icon: "/backend.png",
-    },
 
-];
 
 
 export const skills: Skill[] = [
@@ -96,28 +83,28 @@ export const skills: Skill[] = [
 
 
 export const projects = [
-    {
-        name: "VeganizeIt",
-        description:
-            "Single-page web application for scanning barcodes and searching vegan-friendly products",
-        tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
-                color: "green-text-gradient",
-            },
-            {
-                name: "express",
-                color: "blue-text-gradient",
-            },
-        ],
-        image: "/images/projects/tavenli.png",
-        source_code_link: "https://github.com/Daniel1231234/veganizeIt",
-        demo_link: "https://veganizeit.onrender.com/home",
-    },
+    // {
+    //     name: "VeganizeIt",
+    //     description:
+    //         "Single-page web application for scanning barcodes and searching vegan-friendly products",
+    //     tags: [
+    //         {
+    //             name: "react",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "mongodb",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "express",
+    //             color: "blue-text-gradient",
+    //         },
+    //     ],
+    //     image: "/images/projects/tavenli.png",
+    //     source_code_link: "https://github.com/Daniel1231234/veganizeIt",
+    //     demo_link: "https://veganizeit.onrender.com/home",
+    // },
     {
         name: "BmyGuest",
         description:

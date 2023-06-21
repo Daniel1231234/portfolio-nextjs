@@ -15,10 +15,6 @@ export interface NavLink {
     title: string
 }
 
-interface Services {
-    title: string
-    icon: string
-}
 
 interface Skill {
     name: string
