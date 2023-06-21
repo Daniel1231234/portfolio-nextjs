@@ -1,3 +1,5 @@
+"use client";
+
 import { styles } from "@/app/styles";
 import { staggerContainer } from "@/lib/motion";
 import { motion } from "framer-motion";
