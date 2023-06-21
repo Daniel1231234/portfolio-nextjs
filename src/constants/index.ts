@@ -50,7 +50,7 @@ export const skills: Skill[] = [
     },
     {
         name: "TypeScript",
-        icon: "/tech/typeScript.png",
+        icon: "/tech/typescript.png",
     },
     {
         name: "React JS",
