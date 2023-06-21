@@ -1,30 +1,27 @@
 "use client";
 
-import { CheckCircle } from "lucide-react";
-import Card from "./UI/Card";
-import { skillsData } from "@/data/skills";
+import { SectionWrapper } from "@/hoc";
+import { skills } from "@/constants";
+import { BallCanvas } from "./canvas";
+import { motion } from "framer-motion";
+import { styles } from "@/app/styles";
+import { textVariant } from "@/lib/motion";
 
 const Skills = () => {
   return (
-    <section id="skills">
-      <h2 className="section-title">My Skills</h2>
-      <div className="container reveal flex flex-col sm:flex-row justify-between gap-6">
-        {skillsData.map((skill) => (
-          <Card key={skill.id} className="">
-            <h3 className="text-primary mb-8 text-center">{skill.title}</h3>
-            <div className="skills__content flex flex-wrap flex-col items-start gap-[0.8rem]">
-              {skill.items.map((item, idx) => (
-                <article key={idx} className="skills__details flex gap-4">
-                  <CheckCircle className="skills__details-icon text-primary mt-1.5" />
-                    <h4>{item}</h4>
-                </article>
-              ))}
-            </div>
-          </Card>
+    <>
+      <motion.div variants={textVariant()} className="flex flex-col my-4">
+        <p className={styles.sectionSubText}>My skills</p>
+      </motion.div>
+      <div className="flex flex-row flex-wrap justify-center gap-10">
+        {skills.map((skill) => (
+          <div className="w-28 h-28" key={skill.name} title={skill.name}>
+            <BallCanvas icon={skill.icon} />
+          </div>
         ))}
       </div>
-    </section>
+    </>
   );
 };
 
-export default Skills;
+export default SectionWrapper(Skills, "skills");

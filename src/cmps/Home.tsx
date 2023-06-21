@@ -1,49 +1,28 @@
 "use client";
 
-import Button from "./UI/Button";
-import { AnimatedText } from "./TypingAnimation";
-import Image from "next/image";
-
+import { styles } from "@/app/styles";
+import { ComputersCanvas } from "./canvas";
+import { SectionWrapper } from "@/hoc";
 
 const Home = () => {
   return (
-    <div
-      id="home"
-      className="h-screen w-full "
-    >
-      <div className="flex m-auto flex-col-reverse md:flex-row items-center justify-evenly w-full ">
-
-      <div className="relative h-[400px] md:w-1/2 md:mx-auto my-auto w-11/12 ">
-        <Image 
-          className="max-w-[500px] m-auto"
-          src="/profile.png"
-          alt="profile"
-          fill
-          sizes="(max-width: 768px) 100vw
-              (max-width: 1280px) 50vw,
-              33vw"
-        />
-      </div>
-
-      <div className="md:w-1/2 w-11/12 flex flex-col justify-between h-full gap-3">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <AnimatedText />
-        </div>
-        <div className="flex items-center justify-center gap-4">
-          <Button>
-            <a href="#contact">Lets Talk!</a>
-          </Button>
-          <Button variant="ghost">
-            <a href="/resumeDaniel.pdf" download>
-            Download my CV
-            </a>
-            </Button>
+    <div id="home" className="relative w-full h-screen mx-auto ">
+      <div
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
+        <div>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            {"Hi, I'm "}
+            <span className="text-[#915EFF]">{"Daniel"}</span>
+          </h1>
+          <p className={`${styles.heroSubText} my-6 md:my-2 text-white-100`}>
+            {"I'm A Full Stack Web Developer"}
+          </p>
         </div>
       </div>
-
-      </div>
+      <ComputersCanvas />
     </div>
   );
 };
 
-export default Home;
+export default SectionWrapper(Home, "home");

@@ -1,5 +1,5 @@
-import Providers from "@/cmps/Providers";
 import "./globals.css";
+import Providers from "@/cmps/Providers";
 
 export const metadata = {
   title: "Daniel Shalem portfolio",
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en"  suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>{children}</Providers>
       </body>

@@ -1,9 +1,8 @@
 "use client";
 
 import { Code2Icon, HomeIcon, InfoIcon, Laptop2, MailIcon } from "lucide-react";
-import { FC, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
-
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
@@ -23,9 +22,10 @@ const Nav = () => {
       </a>
       <a
         href="#about"
-        className={cn("p-[0.9rem] rounded-full flex text-white  hover:bg-primary", 
-        activeNav === "#about" && "bg-primary",
-        activeNav === "#about" && "focus:bg-primary focus:text-white"
+        className={cn(
+          "p-[0.9rem] rounded-full flex text-white  hover:bg-primary",
+          activeNav === "#about" && "bg-primary",
+          activeNav === "#about" && "focus:bg-primary focus:text-white"
         )}
         onClick={() => setActiveNav("#about")}
       >
@@ -33,32 +33,37 @@ const Nav = () => {
       </a>
       <a
         href="#skills"
-        className={cn("p-[0.9rem] rounded-full flex text-white  hover:bg-primary ", 
-        activeNav === "#skills" && "bg-primary",
-        activeNav === "#skills" && "focus:bg-primary focus:text-white")}
+        className={cn(
+          "p-[0.9rem] rounded-full flex text-white  hover:bg-primary ",
+          activeNav === "#skills" && "bg-primary",
+          activeNav === "#skills" && "focus:bg-primary focus:text-white"
+        )}
         onClick={() => setActiveNav("#skills")}
       >
         <Code2Icon />
       </a>
       <a
         href="#projects"
-        className={cn("p-[0.9rem] rounded-full flex text-white  hover:bg-primary ", 
-        activeNav === "#projects" && "bg-primary",
-        activeNav === "#projects" && "focus:bg-primary focus:text-white")}
+        className={cn(
+          "p-[0.9rem] rounded-full flex text-white  hover:bg-primary ",
+          activeNav === "#projects" && "bg-primary",
+          activeNav === "#projects" && "focus:bg-primary focus:text-white"
+        )}
         onClick={() => setActiveNav("#projects")}
       >
         <Laptop2 />
       </a>
       <a
         href="#contact"
-        className={cn("p-[0.9rem] rounded-full flex text-white  hover:bg-primary ", 
-        activeNav === "#contact" && "bg-primary",
-        activeNav === "#contact" && "focus:bg-primary focus:text-white")}
+        className={cn(
+          "p-[0.9rem] rounded-full flex text-white  hover:bg-primary ",
+          activeNav === "#contact" && "bg-primary",
+          activeNav === "#contact" && "focus:bg-primary focus:text-white"
+        )}
         onClick={() => setActiveNav("#contact")}
       >
         <MailIcon />
       </a>
-          
     </nav>
   );
 };

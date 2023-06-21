@@ -1,14 +1,16 @@
 import React from "react";
 import { Icons } from "./Icons";
-import { permalinks, socialsData } from "@/data/footer";
+import { permalinks, socialsData } from "@/constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary reveal py-12 px-0 text-center mt-28">
-      <ul className="permalinks flex flex-col md:flex-row sm:flex-wrap justify-center gap-6 sm:gap-8 mt-0 mx-auto mb-12">
+    <footer className="bg-primary py-12 px-0 text-center">
+      <ul className="flex flex-col md:flex-row sm:flex-wrap justify-center gap-6 sm:gap-8 mt-0 mx-auto mb-12">
         {permalinks.map((link) => (
           <li key={link.href}>
-            <a href={link.href} className="text-bg">{link.title}</a>
+            <a href={link.href} className="text-bg">
+              {link.title}
+            </a>
           </li>
         ))}
       </ul>
@@ -17,9 +19,9 @@ const Footer = () => {
         {socialsData.map((opt) => {
           const Icon = Icons[opt.Icon];
           return (
-            <a 
+            <a
               key={opt.href}
-              className="bg-body flex border p-[0.8rem] rounded-[0.7rem] border-solid border-transparent hover:text-body hover:border-body hover:bg-inherit"
+              className="bg-body flex border p-[0.8rem] rounded-[0.7rem] border-solid border-transparent  hover:border-body hover:bg-inherit"
               href={opt.href}
               target="_blank"
               rel="noreferrer"

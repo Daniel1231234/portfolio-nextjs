@@ -7,17 +7,21 @@ import Nav from "@/cmps/Nav";
 import Projects from "@/cmps/Projects";
 import Skills from "@/cmps/Skills";
 
-export default function HomePage() {
+export default function App() {
   return (
-    <>
-      <AppHeader />
-      <Home />
+    <div className="relative z-0">
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <AppHeader />
+        <Home />
+      </div>
       <Nav />
       <About />
       <Skills />
       <Projects />
-      <Contact />
-      <Footer />
-    </>
+      <div className="relative z-0">
+        <Contact />
+        <Footer />
+      </div>
+    </div>
   );
 }
