@@ -128,8 +128,8 @@ export const projects = [
             },
         ],
         image: "/images/projects/bmyguest.png",
-        source_code_link: "https://github.com/Daniel1231234/veganizeIt",
-        demo_link: "https://bmyguest.onrender.com/#/",
+        source_code_link: "https://github.com/Daniel1231234/bmyguest_server",
+        demo_link: "https://bmyguest-beta.vercel.app",
     },
     {
         name: "WhosApp",
