@@ -1,3 +1,4 @@
+import GoogleAnalytics from "@/analytics/GoogleAnalytics"
 import "./globals.css"
 import Providers from "@/cmps/Providers"
 import { Analytics } from "@vercel/analytics/react"
@@ -16,6 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         <Providers>{children}</Providers>
         <Analytics />
       </body>
