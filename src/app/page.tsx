@@ -1,11 +1,11 @@
-import About from "@/cmps/About";
-import AppHeader from "@/cmps/AppHeader";
-import Contact from "@/cmps/Contact";
-import Footer from "@/cmps/Footer";
-import Home from "@/cmps/Home";
-import Nav from "@/cmps/Nav";
-import Projects from "@/cmps/Projects";
-import Skills from "@/cmps/Skills";
+import About from "@/cmps/About"
+import AppHeader from "@/cmps/AppHeader"
+import Contact from "@/cmps/Contact"
+import Footer from "@/cmps/Footer"
+import Home from "@/cmps/Home"
+import Nav from "@/cmps/Nav"
+import Projects from "@/cmps/Projects"
+import Skills from "@/cmps/Skills"
 
 export default function App() {
   return (
@@ -23,5 +23,5 @@ export default function App() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }

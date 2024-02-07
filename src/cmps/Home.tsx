@@ -1,27 +1,27 @@
-"use client";
+"use client"
 
-import { styles } from "@/app/styles";
-import { ComputersCanvas } from "./canvas";
-import { SectionWrapper } from "@/hoc";
-import { useEffect, useState } from "react";
+import { styles } from "@/app/styles"
+import { ComputersCanvas } from "./canvas"
+import { SectionWrapper } from "@/hoc"
+import { useEffect, useState } from "react"
 
 const Home = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-    setIsMobile(mediaQuery.matches);
+    const mediaQuery = window.matchMedia("(max-width: 500px)")
+    setIsMobile(mediaQuery.matches)
 
     const handleMediaQueryChange = (event: MediaQueryListEvent) => {
-      setIsMobile(event.matches);
-    };
+      setIsMobile(event.matches)
+    }
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    mediaQuery.addEventListener("change", handleMediaQueryChange)
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange)
+    }
+  }, [])
 
   return (
     <div id="home" className="relative w-full h-screen mx-auto ">
@@ -40,7 +40,7 @@ const Home = () => {
       </div>
       {!isMobile && <ComputersCanvas />}
     </div>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Home, "home");
+export default SectionWrapper(Home, "home")
