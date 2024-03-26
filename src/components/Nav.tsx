@@ -1,14 +1,14 @@
-"use client";
+"use client"
 
-import { Code2Icon, HomeIcon, InfoIcon, Laptop2, MailIcon } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { Code2Icon, HomeIcon, InfoIcon, Laptop2, MailIcon } from "lucide-react"
+import { useState } from "react"
+import { cn } from "@/lib/utils"
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState("#");
+  const [activeNav, setActiveNav] = useState("#")
 
   return (
-    <nav className="flex max-w-max bg-slate-900 bg-opacity-30 transform px-7 py-2 z-20 fixed left-1/2 bottom-8 backdrop-filter backdrop-blur-lg  justify-center items-center gap-3 rounded-full -translate-x-1/2">
+    <nav className="flex sm:hidden max-w-max bg-slate-900 bg-opacity-30 transform px-7 py-2 z-20 fixed left-1/2 bottom-8 backdrop-filter backdrop-blur-lg  justify-center items-center gap-3 rounded-full -translate-x-1/2">
       <a
         href="#"
         className={cn(
@@ -65,7 +65,7 @@ const Nav = () => {
         <MailIcon />
       </a>
     </nav>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

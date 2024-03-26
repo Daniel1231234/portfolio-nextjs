@@ -1,10 +1,16 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss"
+
+const config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/cmps/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    // "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -15,7 +21,7 @@ module.exports = {
         lg: "40px",
         xl: "80px",
       },
-      maxWidth: {
+      screens: {
         DEFAULT: "1500px",
         "2xl": "1760px",
       },
@@ -47,8 +53,13 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": "url('/herobg.png')",
+        sophie: "url('/images/sophie.png')",
+        trade: "url('/images/trades.png')",
+        bmg: "url('/images/bmyguest.png')",
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
-};
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")],
+} satisfies Config
+
+export default config

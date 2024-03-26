@@ -1,6 +1,6 @@
-import React from "react";
-import { Icons } from "./Icons";
-import { permalinks, socialsData } from "@/constants";
+import React from "react"
+import { Icons } from "./Icons"
+import { permalinks, SOCIAL_DATA } from "@/constants"
 
 const Footer = () => {
   return (
@@ -16,8 +16,8 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials flex justify-center gap-4 mb-[2.6rem] sm:mb-16">
-        {socialsData.map((opt) => {
-          const Icon = Icons[opt.Icon];
+        {SOCIAL_DATA.map((opt) => {
+          const Icon = Icons[opt.Icon]
           return (
             <a
               key={opt.href}
@@ -28,7 +28,7 @@ const Footer = () => {
             >
               <Icon className="h-4 w-4" />
             </a>
-          );
+          )
         })}
       </div>
 
@@ -36,7 +36,7 @@ const Footer = () => {
         <small>&copy; All rights reserved.</small>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
