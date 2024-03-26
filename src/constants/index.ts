@@ -1,6 +1,4 @@
-import { NavLink, Permalinks, Skill, SocialsData } from "./constants"
-
-export const navLinks: NavLink[] = [
+export const NAV_LINKS = [
   {
     id: "about",
     title: "About",
@@ -17,64 +15,90 @@ export const navLinks: NavLink[] = [
     id: "contact",
     title: "Contact",
   },
-]
+] as const
 
-export const skills: Skill[] = [
+export const SKILL_DATA = [
   {
-    name: "HTML 5",
-    icon: "/tech/html.png",
+    skill_name: "HTML",
+    image: "html.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "CSS 3",
-    icon: "/tech/css.png",
+    skill_name: "Python",
+    image: "python.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "JavaScript",
-    icon: "/tech/javascript.png",
+    skill_name: "CSS",
+    image: "css.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "TypeScript",
-    icon: "/tech/typescript.png",
+    skill_name: "JavaScript",
+    image: "javascript.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "React JS",
-    icon: "/tech/reactjs.png",
+    skill_name: "Tailwind CSS",
+    image: "tailwind.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "Tailwind CSS",
-    icon: "/tech/tailwind.png",
+    skill_name: "React",
+    image: "reactjs.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "Node JS",
-    icon: "/tech/nodejs.png",
+    skill_name: "TypeScript",
+    image: "typescript.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "MongoDB",
-    icon: "/tech/mongodb.png",
+    skill_name: "Next.js 14",
+    image: "next.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "Git",
-    icon: "/tech/git.png",
+    skill_name: "Node.js",
+    image: "nodejs.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "Docker",
-    icon: "/tech/docker.png",
+    skill_name: "MongoDB",
+    image: "mongodb.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "NestJS",
-    icon: "/tech/nestjs.png",
+    skill_name: "Docker",
+    image: "docker.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "NextJS",
-    icon: "/tech/nextjs.png",
+    skill_name: "Git",
+    image: "git.png",
+    width: 80,
+    height: 80,
   },
   {
-    name: "Python",
-    icon: "/tech/python.png",
+    skill_name: "NestJS",
+    image: "nestjs.png",
+    width: 80,
+    height: 80,
   },
-]
+] as const
 
-export const socialsData: SocialsData[] = [
+export const SOCIAL_DATA = [
   {
     href: "https://www.facebook.com/daniel.shechter.5/",
     Icon: "FaFacebookF",
@@ -87,9 +111,9 @@ export const socialsData: SocialsData[] = [
     href: "https://www.linkedin.com/in/daniel-shalem-990429211/",
     Icon: "BsLinkedin",
   },
-]
+] as const
 
-export const permalinks: Permalinks[] = [
+export const permalinks = [
   {
     href: "#home",
     title: "Home",
@@ -110,80 +134,35 @@ export const permalinks: Permalinks[] = [
     href: "#contact",
     title: "Contact",
   },
-]
+] as const
 
 export const projectsData = [
   {
     id: 1,
     title: "BmyGuest",
     description:
-      "A single-page, Full stack Web Application (SPA) inspired by Airbnb where users can view, book, and search for listings by location",
+      "Connect travelers and hosts! BmyGuest is a full-stack single-page application inspired by Airbnb. Users can seamlessly search, view, and book unique listings based on their desired location.",
     image: "/images/projects/bmyguest.png",
-    tags: [
-      {
-        name: "vue",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
     gitUrl: "https://github.com/Daniel1231234/bmyguest_server",
     previewUrl: "https://bmyguest-beta.vercel.app",
   },
   {
     id: 2,
-    title: "WhosApp",
+    title: "Modern Landing page",
     description:
-      "A real time chat application that takes your conversations to the next level! Stay connected with your friends in real-time while enjoying the incredible features of ChatGPT. all within one user-friendly platform.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Upstash",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "/images/projects/whosapp.png",
-    gitUrl: "https://github.com/Daniel1231234/whosapp-nextjs",
-    previewUrl: "https://whosapp-nextjs.vercel.app/",
+      "This modern landing page showcases a psychotherapist's services and qualifications in a clear, concise, and engaging way. Designed with a sleek and interactive user experience, it helps potential clients connect with the therapist's expertise.",
+
+    image: "/images/projects/sophie.png",
+    previewUrl: "https://www.sophierachel.com",
+    gitUrl: "",
   },
   {
     id: 3,
-    title: "Politai-social",
+    title: "Plan Your Trade",
     description:
-      "A powerful and feature-rich political social media app. Provides a platform for users to engage in political discussions, share opinions, and connect with like-minded individuals.",
-    image: "/images/projects/politai.png",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    gitUrl: "https://github.com/Daniel1231234/politai",
-    previewUrl: "https://politai.vercel.app/",
+      "Empower your stock market strategy! Plan Your Trade provides US stock market traders with essential calculators and tools. Estimate potential profits and losses, and develop a strategic approach for informed trading decisions.",
+    image: "/images/projects/trades.png",
+    previewUrl: "https://stocksplan.com/",
+    gitUrl: "",
   },
-]
+] as const

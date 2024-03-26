@@ -22,3 +22,9 @@ const GoogleAnalytics = ({ ga_id }: { ga_id: string }) => (
   </>
 )
 export default GoogleAnalytics
+
+export const GoogleAnalyticsWrapper = () => {
+  return process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+    <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+  ) : null
+}

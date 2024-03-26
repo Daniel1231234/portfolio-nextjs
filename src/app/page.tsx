@@ -1,11 +1,11 @@
-import About from "@/cmps/About"
-import AppHeader from "@/cmps/AppHeader"
-import Contact from "@/cmps/Contact"
-import Footer from "@/cmps/Footer"
-import Home from "@/cmps/Home"
-import Nav from "@/cmps/Nav"
-import Projects from "@/cmps/Projects"
-import Skills from "@/cmps/Skills"
+import About from "@/components/About"
+import AppHeader from "@/components/AppHeader"
+import Contact from "@/components/Contact"
+import Footer from "@/components/Footer"
+import Home from "@/components/Home"
+import Nav from "@/components/Nav"
+import Projects from "@/components/Projects"
+import Skills from "@/components/Skills"
 
 export default function App() {
   return (
