@@ -1,16 +1,16 @@
 "use client"
 
-import { SectionWrapper } from "@/hoc"
+import SectionWrapper from "./SectionWrapper"
 import { SKILL_DATA } from "@/constants"
 import { motion } from "framer-motion"
 import { textVariant } from "@/lib/motion"
-import { SkillDataProvider } from "./canvas/SkillsDataProvider"
+import { SkillDataProvider } from "./SkillsDataProvider"
 
 const Skills = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="flex flex-col mt-4 mb-16">
-        <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
+      <motion.div variants={textVariant()} className="flex flex-col mt-4">
+        <p className="sm:text-[18px] text-[14px] text-mainLight uppercase tracking-wider">
           My skills
         </p>
       </motion.div>

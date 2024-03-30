@@ -24,19 +24,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         src={imgUrl}
         alt={title}
         width={1000}
+        priority
         height={1000}
-        className="w-full"
+        className="w-auto h-auto"
       />
       <div className="p-4 relative flex-1">
         <h5 className="text-2xl font-semibold text-white">{title}</h5>
-        <p className="mt-2 text-md text-secondary leading-7">{description}</p>
+        <p className="mt-2 text-md text-mainLight leading-7">{description}</p>
       </div>
       <div className="flex space-x-4 p-4 ">
         {gitUrl && (
           <Link
             href={gitUrl}
             target="_blank"
-            rel="noreferrer noopener"
+            rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
             <CodeBracketIcon className="h-6 w-6" />
@@ -44,6 +45,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
         <Link
           href={previewUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition"
         >
           <EyeIcon className="h-6 w-6" />
