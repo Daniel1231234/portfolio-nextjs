@@ -54,6 +54,7 @@ export const SkillDataProvider = ({
               height={height}
               alt={name}
               priority
+              className="h-auto w-auto"
             />
           </motion.div>
         </TooltipTrigger>

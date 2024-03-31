@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <motion.div
       variants={slideIn("left", "tween", 0.2, 1)}
-      className="flex-1 bg-card text-white shadow-xl p-8 rounded-2xl"
+      className="flex-1 bg-card text-white shadow-xl p-8 rounded-2xl max-w-7xl mx-auto"
     >
       <p className="sm:text-[18px] text-[14px] text-mainLight uppercase tracking-wider">
         Get in touch

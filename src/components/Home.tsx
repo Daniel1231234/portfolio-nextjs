@@ -5,18 +5,14 @@ import { motion } from "framer-motion"
 import { Button } from "./UI/Button"
 import { useRouter } from "next/navigation"
 import { edu } from "@/app/fonts"
+import { textVariant } from "@/lib/motion"
 
 const Home = () => {
   const router = useRouter()
 
   return (
-    <div className="flex flex-col justify-center mt-28 text-white">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-left mb-10"
-      >
+    <div className="flex flex-col justify-center mt-28 text-white max-w-7xl mx-auto">
+      <motion.div variants={textVariant()} className="text-left mb-10">
         <h4 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4">{`Hi, I'm`}</h4>
         <motion.h1
           initial={{ opacity: 0, y: -50 }}

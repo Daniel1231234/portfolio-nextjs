@@ -12,7 +12,7 @@ const About = () => {
   const router = useRouter()
 
   return (
-    <section className="flex flex-col md:flex-row justify-between">
+    <section className="flex flex-col md:flex-row justify-between max-w-7xl mx-auto">
       <motion.div variants={textVariant()} className="flex flex-col my-4">
         <p className="sm:text-[18px] text-[14px] text-mainLight uppercase tracking-wider">
           Introduction

@@ -9,7 +9,7 @@ import Image from "next/image"
 const Footer = () => {
   return (
     <footer className="text-white body-font backdrop-blur-lg bg-mainDark py-6">
-      <div className="sm:px-16 px-auto mx-auto flex items-center sm:flex-row flex-col font-thin">
+      <div className="sm:px-16 px-auto mx-auto flex items-center sm:flex-row flex-col font-thin max-w-7xl">
         <Link
           href="/"
           className="flex title-font font-medium items-center md:justify-start justify-center"

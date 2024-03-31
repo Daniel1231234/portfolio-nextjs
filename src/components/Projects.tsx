@@ -17,7 +17,7 @@ const Projects = () => {
   }
 
   return (
-    <>
+    <div className="max-w-7xl mx-auto">
       <motion.div variants={textVariant()}>
         <p className="sm:text-[18px] text-[14px] text-mainLight uppercase tracking-wider">
           My work
@@ -63,7 +63,7 @@ const Projects = () => {
           </motion.li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 

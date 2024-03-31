@@ -24,6 +24,26 @@ const Nav = () => {
     }
   }
 
+  const handleScroll = () => {
+    const currentSection = navItems.find(({ to }) => {
+      const section = document.getElementById(to)
+      if (section) {
+        const sectionTop = section.getBoundingClientRect().top
+        return sectionTop >= 0 && sectionTop < window.innerHeight / 2
+      }
+      return false
+    })
+
+    setActiveNav(currentSection ? `#${currentSection.to}` : "#")
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <nav
       className={`flex sm:hidden bg-mainDark bg-opacity-30 transform px-4 py-2 z-20 fixed left-1/2 bottom-4 backdrop-filter backdrop-blur-lg justify-center items-center gap-2 rounded-full -translate-x-1/2 ${
