@@ -17,6 +17,7 @@ const AppHeader = () => {
   return (
     <header>
       <nav
+        id="header"
         className={cn(
           "sm:px-16 px-6 w-full flex items-center py-3 fixed top-0 z-20",
           !isAtTop ? "bg-mainDark" : "bg-transparent"

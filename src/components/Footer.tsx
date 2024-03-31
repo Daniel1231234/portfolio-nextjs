@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import Link from "next/link"
 import { Icons } from "./Icons"
@@ -17,7 +19,7 @@ const Footer = () => {
             alt="Logo"
             width="30"
             height="60"
-            className=" w-auto h-auto"
+            className=" w-auto h-auto hidden sm:block"
           />
           <span className="ml-3 text-xl">Daniel Shalem</span>
         </Link>

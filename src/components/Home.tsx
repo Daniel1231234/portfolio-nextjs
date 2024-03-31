@@ -10,41 +10,46 @@ const Home = () => {
   const router = useRouter()
 
   return (
-    <div className="z-10 text-left min-h-screen text-white mt-28 flex flex-col justify-start">
-      <div className="mb-8 lg:mb-5 flex flex-col gap-4">
-        <h4 className="text-lg sm:text-xl md:text-2xl">{`Hi, I'm`}</h4>
+    <div className="flex flex-col justify-center mt-28 text-white">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-left mb-10"
+      >
+        <h4 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4">{`Hi, I'm`}</h4>
         <motion.h1
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-4xl  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold whitespace-nowrap"
         >
           <span className="text-gray-500 hover:text-gray-400">Daniel </span>
           <span className="text-indigo-500">Shalem</span>
         </motion.h1>
-      </div>
+      </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.7 }}
-        className="mb-12"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="mb-8"
       >
         <h4
-          className={` ${edu.className} text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-wide`}
+          className={`${edu.className} text-lg md:text-xl lg:text-2xl xl:text-3xl font-light`}
         >
           Full Stack Developer | Coding Mentor | Tech Enthusiast
         </h4>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 1.4 }}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.9 }}
       >
         <Button
           size="lg"
-          className="border-indigo-500 border-2"
+          className="border-indigo-500 border-2 mx-auto"
           onClick={() => router.push("#contact")}
         >
           Contact me today!
