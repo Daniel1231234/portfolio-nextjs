@@ -31,9 +31,7 @@ const Home = () => {
         transition={{ duration: 0.5, delay: 0.6 }}
         className="mb-8"
       >
-        <h4
-          className={`${edu.className} text-lg md:text-xl lg:text-2xl xl:text-3xl font-light`}
-        >
+        <h4 className={`text-lg md:text-xl lg:text-2xl xl:text-3xl font-light`}>
           Full Stack Developer | Coding Mentor | Tech Enthusiast
         </h4>
       </motion.div>

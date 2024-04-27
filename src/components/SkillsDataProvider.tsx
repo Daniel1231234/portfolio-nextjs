@@ -47,6 +47,7 @@ export const SkillDataProvider = ({
             animate={inView ? "visible" : "hidden"}
             custom={index}
             transition={{ delay: index * animationDelay }}
+            className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[80px] md:h-[80px]"
           >
             <Image
               src={`/tech/${src}`}

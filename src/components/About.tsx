@@ -37,7 +37,7 @@ const About = () => {
           </Button>
 
           <Link
-            href="/resumeDaniel.pdf"
+            href="/Daniel_Shalem_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="active:scale-95 text-white inline-flex items-center justify-center rounded-md text-sm font-medium transition-color focus:outline-none focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none bg-transparent border border-white hover:border-transparent transition duration-150 ease-in-out h-10 py-2 px-4"
